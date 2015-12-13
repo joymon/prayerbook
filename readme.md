@@ -1,4 +1,7 @@
 This is a prayer book intended for personal prayers. Currently it supports Christian Roman catholic prayers in Malayalam Language.
+
+*This requires little prior knowledge in web technology and github source control system.*
+
 # How to get source and run in your machine
 
 1. Get a git client software
