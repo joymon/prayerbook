@@ -1,17 +1,23 @@
 This is a prayer book intended for personal prayers. Currently it supports Christian Roman catholic prayers in Malayalam Language.
 
-# How to get source and run in your machine
+# How to get source
 
 *This requires little prior knowledge in web technology and github source control system.*
 
-1. Get a git client software. It doesn't need account in www.github.com
-2. Get the source code from repository using that software. It will download the source to a location in your hard drive
- 1. The url to use for cloning is https://github.com/joymon/PrayerBook.git  
-3. Without a server
+1. Using git client software
+ 1. Get a git client software. It doesn't need account in www.github.com
+ 2. Get the source code from repository using that software. It will download the source to a location in your hard drive
+  1. The url to use for cloning is https://github.com/joymon/PrayerBook.git  
+2. Dowload the source code as zip file by clicking on below link.
+ 1. http://simplecast.fm/podcasts/279/rss
+
+# Running the application
+
+1. Without a server
  1. Double click on the index.html file present in the \src folder
  2. It will start your default browser and load the page there
  3. There will be a popup asking for permission to run JavaScript. Enable it as this is a JavaScript based application.
-4. With a web server 
+2. With a web server 
  1. Copy the src folder into the root folder of web server
  2. Browser to http://localhost/src/index.html. Mostly there won't be any need to enabling JavaScript
 
