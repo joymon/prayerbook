@@ -5,7 +5,6 @@
     function callGASuperProxy(){
         $http.get('https://gasuperproxyapi.appspot.com/query?id=ahFzfmdhc3VwZXJwcm94eWFwaXIVCxIIQXBpUXVlcnkYgICAgICAgAoM&callback=jsonpHandler')
         .success(function (e) {
-            alert(e);
         });
     }   
     return { pageviews: pageviews };
