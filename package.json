@@ -1,9 +1,13 @@
 {
     "name": "PrayerBook",
     "version": "0.0.1",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/joymon/PrayerBook.git"
+    },
     "scripts": {
         "test": "./node_modules/.bin/karma start tests/karma.config.js"
-        
     },
     "devDependencies": {
         "jasmine": "^2.3.2",
