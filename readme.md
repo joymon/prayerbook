@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/joymon/PrayerBook.svg)](https://travis-ci.org/joymon/PrayerBook)
 This is a prayer book intended for personal prayers. Currently it supports Christian Roman catholic prayers in Malayalam Language.
 
 # How to get source
