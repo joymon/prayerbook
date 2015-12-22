@@ -9,7 +9,7 @@
     }   
     return { pageviews: pageviews };
 }
-var pageviews;
+var pageviews=0;
 function jsonpHandler(e ){
-    pageviews = e.totalsForAllResults["ga:pageviews"];
+    pageviews = parseInt( e.totalsForAllResults["ga:pageviews"],10);
 }
