@@ -11,7 +11,7 @@ This is a prayer book intended for personal prayers. Currently it supports Chris
  2. Get the source code from repository using that software. It will download the source to a location in your hard drive
   1. The url to use for cloning is https://github.com/joymon/PrayerBook.git  
 2. Dowload the source code as zip file by clicking on below link.
- 1. http://simplecast.fm/podcasts/279/rss
+ 1. https://github.com/joymon/PrayerBook/archive/master.zip
 
 # Running the application
 
