@@ -16,8 +16,8 @@ This is a prayer book intended for personal prayers. Currently it supports Chris
 # Running the application
 
 1. Without a server
- 1. Double click on the index.html file present in the \src folder
- 2. It will start your default browser and load the page there
+ 1. Double click on the index.html file present in the \src folder.
+ 2. It will start your default browser and load the page there.
  3. There will be a popup asking for permission to run JavaScript. Enable it as this is a JavaScript based application.
 2. With a web server 
  1. Copy the src folder into the root folder of web server
