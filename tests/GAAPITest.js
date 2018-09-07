@@ -9,6 +9,6 @@ describe('Sample', function () {
     it("Sould return API data when GAAPI is called", function () {
         var result = 0;
         expect(GAAPI.pageviews).toBe(result);
-            console.log('Sould return API data when GAAPI is called : ' + 'Worked')
+            console.log('Should return API data when GAAPI is called : ' + 'Worked')
     });
 });
