@@ -6,12 +6,9 @@ module.exports = function(config) {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
-
-
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
-
     // list of files / patterns to load in the browser
     files: [
       '../node_modules/angular/angular.js',
@@ -23,8 +20,6 @@ module.exports = function(config) {
       '../src/js/*.js',
       '../tests/*Test.js'
     ],
-
-
     // list of files to exclude
     exclude: [
     ],
@@ -57,13 +52,9 @@ module.exports = function(config) {
 
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
-
-
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
-
-
+    browsers: ['Chrome'],
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: true,
