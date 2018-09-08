@@ -1,5 +1,7 @@
 // Karma configuration
 // Generated on Tue Nov 03 2015 13:43:21 GMT-0500 (Eastern Standard Time)
+const puppeteer = require('puppeteer');
+process.env.CHROME_BIN = puppeteer.executablePath();
 
 module.exports = function(config) {
   config.set({
@@ -54,7 +56,27 @@ module.exports = function(config) {
     autoWatch: true,
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['Chrome','ChromeHeadless','ChromeHeadlessNoSandbox'],
+    customLaunchers: {
+      'ChromeHeadless': {
+        base: 'Chrome',
+        flags: [
+            '--headless',
+            '--disable-gpu',
+            // Without a remote debugging port, Google Chrome exits immediately.
+            '--remote-debugging-port=9222'
+        ],
+        debug: true
+    },
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    },
+    plugins: [
+      'karma-jasmine',
+      'karma-chrome-launcher'
+    ],
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: true,
