@@ -4,3 +4,4 @@ node_js:
 sudo: required
 addons:
   chrome: stable
+after_success: cp -R src dist/
