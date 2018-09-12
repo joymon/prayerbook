@@ -4,4 +4,15 @@ node_js:
 sudo: required
 addons:
   chrome: stable
-after_success: cp -R src dist/
+after_success: 
+  - cp -R src docs/
+  - ls docs
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: docs
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
+  repo: joymon/prayerbook
+  target_branch: master
