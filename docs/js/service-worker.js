@@ -28,11 +28,16 @@ self.addEventListener('activate', function(e) {
       );
       return self.clients.claim();
   });
-  self.addEventListener('fetch', function(e) {
+  self.addEventListener('fetch', function(event) {
     console.log('[ServiceWorker] Fetch', e.request.url);
-    e.respondWith(
-      caches.match(e.request).then(function(response) {
-        return response || fetch(e.request);
+    event.respondWith(
+      caches.open(CACHE_NAME).then(function(cache) {
+        return cache.match(event.request).then(function (response) {
+          return response || fetch(event.request).then(function(response) {
+            cache.put(event.request, response.clone());
+            return response;
+          });
+        });
       })
     );
   });
