@@ -6,6 +6,7 @@ var urlsToCache = [
 ];
 self.addEventListener('install', function(event) {
   // Perform install steps
+  console.log('[ServiceWorker] Install');
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
