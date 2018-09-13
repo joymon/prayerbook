@@ -1,6 +1,7 @@
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("js/service-worker.js").then(function() {
-    console.log("Service Worker Registered");
+  navigator.serviceWorker.register("service-worker.js").
+  then(function(reg) {
+    console.log("Service Worker Registered at scope " + reg.scope);
   });
 }
 var app = angular.module("prayerBook", ["ui.bootstrap"]);
