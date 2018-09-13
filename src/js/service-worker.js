@@ -1,11 +1,11 @@
 var CACHE_NAME = 'pb-site-cache-v1';
 var urlsToCache = [
-  './js/app.js',
-  './js/ga.js',
-  './index.html',
-  './js/controllers/MainCtrl.js',
-  './js/controllers/DevCreditsCtrl.js',
-  './js/services/GAAPI.js'
+  '/js/app.js',
+  '/js/ga.js',
+  '/index.html',
+  '/js/controllers/MainCtrl.js',
+  '/js/controllers/DevCreditsCtrl.js',
+  '/js/services/GAAPI.js'
 ];
 self.addEventListener('install', function(event) {
   // Perform install steps
