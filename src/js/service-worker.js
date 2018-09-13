@@ -5,7 +5,7 @@ var urlsToCache = [
   'index.html',
   'js/controllers/MainCtrl.js',
   'js/controllers/DevCreditsCtrl.js',
-  'js/services/GAAPI.js',
+  'js/services/GAAPI.js'
 ];
 self.addEventListener('install', function(event) {
   // Perform install steps
