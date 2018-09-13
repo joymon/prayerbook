@@ -1,11 +1,11 @@
 var CACHE_NAME = 'pb-site-cache-v1';
 var urlsToCache = [
-  '/js/app.js',
-  '/js/ga.js',
-  '/index.html',
-  '/js/controllers/MainCtrl.js',
-  '/js/controllers/DevCreditsCtrl.js',
-  '/js/services/GAAPI.js'
+  '../js/app.js',
+  '../js/ga.js',
+  '../index.html',
+  '../js/controllers/MainCtrl.js',
+  '../js/controllers/DevCreditsCtrl.js',
+  '../js/services/GAAPI.js'
 ];
 self.addEventListener('install', function(event) {
   // Perform install steps
@@ -22,7 +22,7 @@ self.addEventListener('activate', function(e) {
     e.waitUntil(
         caches.keys().then(function(keyList) {
           return Promise.all(keyList.map(function(key) {
-            if (key !== cacheName) {
+            if (key !== CACHE_NAME) {
               console.log('[ServiceWorker] Removing old cache', key);
               return caches.delete(key);
             }
