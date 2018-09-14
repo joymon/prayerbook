@@ -6,6 +6,8 @@ addons:
   chrome: stable
 after_success: 
   - echo ${TRAVIS_JOB_NUMBER}
+  - npm version patch
+  - npm run patch
   - rm -rf docs
   - cp -R src docs/
   - ls docs

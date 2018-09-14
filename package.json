@@ -1,5 +1,5 @@
 {
-    "name": "PrayerBook",
+    "name": "prayerbook",
     "version": "0.0.1",
     "private": true,
     "repository": {
@@ -7,8 +7,9 @@
         "url": "https://github.com/joymon/PrayerBook.git"
     },
     "scripts": {
-        "serve": "./node_modules/.bin/http-server ./src",
-        "test": "./node_modules/.bin/karma start tests/karma.config.js"
+        "start": "./node_modules/.bin/http-server ./src",
+        "test": "./node_modules/.bin/karma start tests/karma.config.js",
+        "patch":"node build/patchVersion.js"
     },
     "devDependencies": {
         "angular": "^1.3.16",
