@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/joymon/PrayerBook.svg)](https://travis-ci.org/joymon/PrayerBook)
-[![Known Vulnerabilities](https://snyk.io/test/github/joymon/PrayerBook/badge.svg?targetFile=package.json)](https://snyk.io/test/github/joymon/PrayerBook?targetFile=package.json)
+[![Build Status](https://travis-ci.org/joymon/prayerbook.svg)](https://travis-ci.org/joymon/prayerbook)
+[![Known Vulnerabilities](https://snyk.io/test/github/joymon/prayerbook/badge.svg?targetFile=package.json)](https://snyk.io/test/github/joymon/prayerbook?targetFile=package.json)
 
 This is a prayer book intended for personal prayers. Currently it supports Christian Roman catholic prayers in Malayalam Language.
 
