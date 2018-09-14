@@ -5,10 +5,10 @@ sudo: required
 addons:
   chrome: stable
 after_success: 
+  - echo ${TRAVIS_JOB_NUMBER}
   - rm -rf docs
   - cp -R src docs/
   - ls docs
-  - echo $TRAVIS_JOB_NUMBER
 deploy:
   - provider: pages
     skip_cleanup: true
