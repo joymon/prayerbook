@@ -9,11 +9,21 @@ after_success:
   - cp -R src docs/
   - ls docs
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  on:
-    branch: master
-  repo: joymon/prayerbook
-  target_branch: master
-  keep-history: true
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+    on:
+      branch: master
+    repo: joymon/prayerbook
+    target_branch: master
+    keep-history: true
+  - provider: pages
+    local_dir: docs/
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+    on:
+      tags: true
+    repo: prayerbook/prayerbook.github.io
+    target_branch: master
+    keep-history: true
+  
