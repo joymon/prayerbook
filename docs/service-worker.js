@@ -35,7 +35,7 @@ self.addEventListener("activate", function(e) {
   return self.clients.claim();
 });
 self.addEventListener("fetch", function(event) {
-  console.log("[ServiceWorker] Fetch", event.request.url);
+  //console.log("[ServiceWorker] Fetch", event.request.url);
   if (event.request.url.indexOf("http") === 0) {
     event.respondWith(
       caches.open(CACHE_NAME).then(function(cache) {
