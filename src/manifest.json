@@ -39,7 +39,7 @@
   ],
   "background_color": "#1565c0",
   "theme_color": "#1565c0",
-  "start_url": "/?utm_source=a2hs",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "any"
 }
