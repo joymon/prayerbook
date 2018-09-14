@@ -1,6 +1,20 @@
+
+window.addEventListener("beforeinstallprompt", e => {
+  e.prompt();
+  // Wait for the user to respond to the prompt
+  e.userChoice.then(choiceResult => {
+    if (choiceResult.outcome === "accepted") {
+      console.log("User accepted to install");
+    } else {
+      console.log("User dismissed the prompt");
+    }
+  });
+});
+window.addEventListener('appinstalled', (evt) => {
+  console.log('a2hs', 'installed');
+});
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js").
-  then(function(reg) {
+  navigator.serviceWorker.register("service-worker.js").then(function(reg) {
     console.log("Service Worker Registered at scope " + reg.scope);
   });
 }
