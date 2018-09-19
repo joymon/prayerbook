@@ -4,12 +4,13 @@ node_js:
 sudo: required
 addons:
   chrome: stable
-after_success: 
+before_script:
   - echo ${TRAVIS_JOB_NUMBER}
   - npm version patch
   - npm run patch
+after_success: 
   - rm -rf docs
-  - cp -R src docs/
+  - cp -R dist docs/
   - ls docs
 deploy:
   - provider: pages

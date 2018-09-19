@@ -1,4 +1,4 @@
-function DevCreditsCtrl($scope, $modalInstance) {
+export default function DevCreditsCtrl($scope, $modalInstance) {
     $scope.ok = function () {
         $modalInstance.close();
     };

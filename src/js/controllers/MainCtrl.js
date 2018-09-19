@@ -1,14 +1,13 @@
-function MainCtrl($scope, $http, $sce,$modal,GAAPI) {
+export default function MainCtrl($scope, $http, $sce,$modal,GAAPI) {
     //alert("controller loaded");
     $scope.prayers = [];
     $http.get('data/prayers.json')
         .then(function (response) {
-            for (index in response.data) {
-                var prayer = response.data[index];
+            response.data.forEach((prayer,index)=>{
                 prayer.id = index;
                 $scope.prayers.push({ "id": prayer.id, "title": prayer.title, "content": "" });
                 downloadPrayerContent(prayer);
-            }
+            });
         });
     $scope.currentPage = 1;
     $scope.pageChanged = function () {
@@ -55,5 +54,4 @@ function MainCtrl($scope, $http, $sce,$modal,GAAPI) {
         }
         return $sce.trustAsHtml(html);
     };
-
 }

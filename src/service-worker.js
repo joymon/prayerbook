@@ -36,7 +36,7 @@ self.addEventListener("activate", function(e) {
 });
 self.addEventListener("fetch", function(event) {
   //console.log("[ServiceWorker] Fetch", event.request.url);
-  if (event.request.url.indexOf("http") === 0) {
+  if (event.request.url.indexOf("http") === 0 && event.request.method === 'GET') {
     event.respondWith(
       caches.open(CACHE_NAME).then(function(cache) {
         return cache.match(event.request).then(function(cachedResponse) {

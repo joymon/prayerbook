@@ -1,30 +1,20 @@
+import angular from 'angular'
+import uibootstrap from 'angular-ui-bootstrap'
+require('./ga.js');
+require('./fbComments.js');
+require('./serviceworker-reg');
+import GAAPI from './services/GAAPI'
+import DevCreditsCtrl from './controllers/DevCreditsCtrl'
+import MainCtrl from './controllers/MainCtrl'
 
-window.addEventListener("beforeinstallprompt", e => {
-  e.prompt();
-  // Wait for the user to respond to the prompt
-  e.userChoice.then(choiceResult => {
-    if (choiceResult.outcome === "accepted") {
-      console.log("User accepted to install");
-    } else {
-      console.log("User dismissed the prompt");
-    }
-  });
-});
-window.addEventListener('appinstalled', (evt) => {
-  console.log('a2hs', 'installed');
-});
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js").then(function(reg) {
-    console.log("Service Worker Registered at scope " + reg.scope);
-  });
-}
 var app = angular.module("prayerBook", ["ui.bootstrap"]);
 app.service("GAAPI", ["$http", GAAPI]);
+console.log(MainCtrl);
 app.controller("MainCtrl", [
   "$scope",
   "$http",
   "$sce",
-  "$modal",
+  "$uibModal",
   "GAAPI",
   MainCtrl
 ]);
