@@ -2,10 +2,9 @@ var webpack = require("webpack");
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
-  entry: {
-    app: path.resolve(__dirname, "src/JS/app.js")
+  entry: path.resolve(__dirname, "src/JS/app.js")
     // app:  "./src/JS/app.js"
-  },
+  ,
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
