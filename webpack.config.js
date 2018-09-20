@@ -10,7 +10,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist")
   },
   optimization: {
-    minimize: false,
     splitChunks: {
       chunks: "all",
       //   name: true,
