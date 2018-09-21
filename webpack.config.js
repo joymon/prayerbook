@@ -51,18 +51,8 @@ module.exports = {
         flatten: true
       },
       {
-        from: "src/data/*.json",
+        from: "src/data",
         to: "./data",
-        flatten: true
-      },
-      {
-        from: "src/data/prayers",
-        to: "./data/prayers",
-        flatten: true
-      },
-      {
-        from: "src/data/songs",
-        to: "./data/songs",
         flatten: true
       },
       {
