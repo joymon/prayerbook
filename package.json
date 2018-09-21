@@ -1,6 +1,6 @@
 {
     "name": "prayerbook",
-    "version": "0.0.1237",
+    "version": "0.0.1238",
     "private": true,
     "repository": {
         "type": "git",
@@ -18,19 +18,14 @@
         "angular-mocks": "^1.3.16",
         "angular-sanitize": "^1.7.4",
         "angular-ui-bootstrap": "^2.5.6",
-        "bootstrap": "^4.1.3",
         "copy-webpack-plugin": "^4.5.2",
-        "css-loader": "^1.0.0",
         "ftp-deploy": "^1.1.0",
         "http-server": "^0.11.1",
         "jasmine": "^2.3.2",
         "jasmine-core": "^2.3.4",
-        "jquery": "^3.3.1",
         "karma": "^3.0.0",
         "karma-chrome-launcher": "^2.2.0",
         "karma-jasmine": "^1.1.2",
-        "popper.js": "^1.14.4",
-        "style-loader": "^0.23.0",
         "webpack": "^4.19.0",
         "webpack-cli": "^3.1.0",
         "webpack-dev-server": "^3.1.8"
