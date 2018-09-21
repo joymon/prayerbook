@@ -27,6 +27,10 @@ module.exports = {
       }
     }
   },
+  module: {
+    rules:[
+        { test: /\.css$/, loaders: ['style-loader', 'css-loader']}
+    ]},
   plugins: [
     //new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'dist/vendor.bundle.js'}),
     new CopyWebpackPlugin([
