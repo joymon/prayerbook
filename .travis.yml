@@ -2,6 +2,8 @@ language: node_js
 node_js:
   - "stable"
 sudo: required
+# require the branch name to be master (note for PRs this is the base branch name)
+if: sender != traviscibot
 addons:
   chrome: stable
 before_script:
