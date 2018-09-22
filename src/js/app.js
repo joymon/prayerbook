@@ -1,14 +1,18 @@
 import angular from "angular";
+import 'bootstrap'
 import uibootstrap from "angular-ui-bootstrap";
 import sanitize from "angular-sanitize";
+import accordion from 'angular-ui-bootstrap/src/accordion';
+import 'bootstrap/dist/css/bootstrap.min.css'
 require("./ga.js");
 require("./fbComments.js");
 require("./serviceworker-reg");
+
 import GAAPI from "./services/GAAPI";
 import DevCreditsCtrl from "./controllers/DevCreditsCtrl";
 import MainCtrl from "./controllers/MainCtrl";
 
-var app = angular.module("prayerBook", ["ui.bootstrap", "ngSanitize"]);
+var app = angular.module("prayerBook", ["ui.bootstrap", "ngSanitize",accordion]);
 app.config(['$sceDelegateProvider' , function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
     // Allow same origin resource loads.
@@ -26,4 +30,4 @@ app.controller("MainCtrl", [
   "GAAPI",
   MainCtrl
 ]);
-app.controller("DevCreditsCtrl", DevCreditsCtrl);
+app.controller("DevCreditsCtrl", ["$scope","$uibModalInstance",DevCreditsCtrl]);

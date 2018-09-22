@@ -27,6 +27,10 @@ module.exports = {
       }
     }
   },
+  module: {
+    rules:[
+        { test: /\.css$/, loaders: ['style-loader', 'css-loader']}
+    ]},
   plugins: [
     //new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'dist/vendor.bundle.js'}),
     new CopyWebpackPlugin([
@@ -50,25 +54,14 @@ module.exports = {
         to: ".",
         flatten: true
       },
-      
       {
-        from: "src/images",
-        to: "./images",
-        flatten: true
-      },
-      {
-        from: "src/data/*.json",
+        from: "src/data",
         to: "./data",
         flatten: true
       },
       {
-        from: "src/data/prayers/*.*",
-        to: "./data/prayers",
-        flatten: true
-      },
-      {
-        from: "src/data/songs/*.*",
-        to: "./data/songs",
+        from: "src/images",
+        to: "./images",
         flatten: true
       }
     ])
