@@ -10,7 +10,7 @@
     <meta name="theme-color" content=#2196F3>
     <title>കുടുംബ പ്രാര്‍ത്ഥന</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" /> -->
     <link rel="manifest" href="manifest.json">
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular.js"></script> -->
@@ -36,7 +36,7 @@
     <script src="https://gasuperproxyapi.appspot.com/query?id=ahFzfmdhc3VwZXJwcm94eWFwaXIVCxIIQXBpUXVlcnkYgICAgICAgAoM&callback=jsonpHandler">
     </script> -->
     <!--Script for google analytics to capture page views-->
-    
+
 </head>
 
 <body ng-app="prayerBook" ng-strict-di>
@@ -44,17 +44,17 @@
     <!-- <script src="js/fbComments.js"></script> -->
     <div class="container" ng-controller="MainCtrl">
         <h1>Prayer Book <br />കുടുംബ പ്രാര്‍ത്ഥന</h1>
-        <div class="visible-lg">
+        <div class="d-none d-lg-block d-xl-none">
             Trouble viewing contents in Malayalam font? <a href="https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%B9%E0%B4%BE%E0%B4%AF%E0%B4%82:To_Read_in_Malayalam">Please
                 setup the computer to use unicode Malayalam font.</a>
         </div>
-        <div class="hidden-lg">
+        <div class="d-lg-none .d-xl-block">
             <a href="https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%B9%E0%B4%BE%E0%B4%AF%E0%B4%82:To_Read_in_Malayalam">Malayalam
                 unicode font</a>
         </div>
         <div id="accordion">
-            <accordion-group ng-repeat="prayer in prayers">	            <div class="card" ng-repeat="prayer in prayers track by $index">
-                <accordion-heading>	                <div class="card-header">
+            <div class="card" ng-repeat="prayer in prayers track by $index">
+                <div class="card-header">
                     <button class="btn btn-link" data-toggle="collapse" data-target="{{'#c'+$index}}">
                         <span ng-bind-html="renderHTML(prayer.title)"></span>
                     </button>
@@ -64,13 +64,21 @@
                 </div>
             </div>
         </div>
+        <!-- <uib-accordion close-others="oneAtATime">
+            <div class="panel-default" uib-accordion-group ng-repeat="prayer in prayers">
+                <uib-accordion-heading>
+                    <span ng-bind-html="renderHTML(prayer.title)"></span>
+                </uib-accordion-heading>
+                <div ng-bind-html="renderHTML(prayer.content)"></div>
+            </div>
+        </uib-accordion> -->
         <!--<pagination total-items="10" items-per-page="1" ng-model="currentPage" next-text=">" previous-text="<" ></pagination>
         <rating ng-model="currentPage" max="10" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'"></rating>-->
         <div class="row">
             <div class="col-md-8 fb-comments" data-href="http://www.joymononline.in/apps/prayerbook/index.html"
                 data-numposts="5"></div>
-            <buttton class="col-md-2 btn btn-link" disabled="disabled">Total visitors : {{pageviews}}</buttton>
-            <button class="col-md-2 btn btn-link text-right" ng-click="showCredits()"> Team PrayerBook</button>
+            <button class="col-md-2 btn btn-link" disabled="disabled">Total visitors : {{pageviews}}</buttton>
+                <button class="col-md-2 btn btn-link text-right" ng-click="showCredits()"> Team PrayerBook</button>
         </div>
 
         <div class="text-center">Copyright © 2018 by <a href="http://www.joymononline.in">JoymonOnline</a> - Version
