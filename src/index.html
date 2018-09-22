@@ -52,14 +52,18 @@
             <a href="https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%B9%E0%B4%BE%E0%B4%AF%E0%B4%82:To_Read_in_Malayalam">Malayalam
                 unicode font</a>
         </div>
-        <accordion close-others="true">
-            <accordion-group ng-repeat="prayer in prayers">
-                <accordion-heading>
-                    <span ng-bind-html="renderHTML(prayer.title)"></span>
-                </accordion-heading>
-                <div ng-bind-html="renderHTML(prayer.content)"></div>
-            </accordion-group>
-        </accordion>
+        <div id="accordion">
+            <accordion-group ng-repeat="prayer in prayers">	            <div class="card" ng-repeat="prayer in prayers track by $index">
+                <accordion-heading>	                <div class="card-header">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="{{'#c'+$index}}">
+                        <span ng-bind-html="renderHTML(prayer.title)"></span>
+                    </button>
+                </div>
+                <div id="{{'c' + $index}}" class="collapse" data-parent="#accordion">
+                    <div class="card-body" ng-bind-html="renderHTML(prayer.content)"></div>
+                </div>
+            </div>
+        </div>
         <!--<pagination total-items="10" items-per-page="1" ng-model="currentPage" next-text=">" previous-text="<" ></pagination>
         <rating ng-model="currentPage" max="10" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'"></rating>-->
         <div class="row">
