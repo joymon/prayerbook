@@ -50,14 +50,25 @@ module.exports = {
         to: ".",
         flatten: true
       },
+      
       {
-        from: "src/data",
+        from: "src/images",
+        to: "./images",
+        flatten: true
+      },
+      {
+        from: "src/data/*.json",
         to: "./data",
         flatten: true
       },
       {
-        from: "src/images",
-        to: "./images",
+        from: "src/data/prayers/*.*",
+        to: "./data/prayers",
+        flatten: true
+      },
+      {
+        from: "src/data/songs/*.*",
+        to: "./data/songs",
         flatten: true
       }
     ])
