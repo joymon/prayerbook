@@ -10,6 +10,7 @@ self.addEventListener("install", function(event) {
   console.log("[ServiceWorker] Install");
   event.waitUntil(
     caches.open(CACHE_NAME).then(function(cache) {
+      console.log("[ServiceWorker] Install - New cache created. Name" + CACHE_NAME);
       return cache.addAll(urlsToCache);
     })
   );
@@ -21,7 +22,7 @@ self.addEventListener("activate", function(e) {
       return Promise.all(
         keyList.map(function(key) {
           if (key !== CACHE_NAME) {
-            console.log("[ServiceWorker] Removing old cache", key);
+            console.log("[ServiceWorker] Removing old cache as new SW activated. key = "+ key);
             return caches.delete(key);
           }
         })
