@@ -1,5 +1,4 @@
 export default function MainCtrl($scope, $http, $sce, $modal, GAAPI) {
-  //alert("controller loaded");
   $scope.prayers = [];
   $http.get("data/prayers.json").then(function(response) {
     response.data.forEach((prayer, index) => {
@@ -8,10 +7,6 @@ export default function MainCtrl($scope, $http, $sce, $modal, GAAPI) {
       downloadPrayerContent(prayer);
     });
   });
-  $scope.currentPage = 1;
-  $scope.pageChanged = function() {
-    $log.log("Page changed to: " + $scope.currentPage);
-  };
   GAAPI.getPageViews().then(function(response) {
     $scope.pageviews = response.data.rows[0][0];
   });
