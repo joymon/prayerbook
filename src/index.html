@@ -11,7 +11,6 @@
     <title>കുടുംബ പ്രാര്‍ത്ഥന</title>
     <link rel="manifest" href="manifest.json">
     <link rel="shortcut icon" href="favicon.ico">
-    
     <script src="vendors.bundle.js"></script>
     <script src="main.bundle.js"></script>
 </head>
@@ -19,7 +18,15 @@
 <body ng-app="prayerBook" ng-strict-di>
     <div id="fb-root"></div>
     <div class="container" ng-controller="MainCtrl">
-        <h1>കുടുംബ പ്രാര്‍ത്ഥന</h1>
+        <div class="row">
+            <div class="col-md-1">
+                <img class="img-fluid d-none d-lg-block d-xl-block" src="images/icon-192.jpg"/>
+                <!-- <img class="img-fluid d-lg-none .d-xl-block" src="images/icon-48.jpg"/> -->
+            </div>
+            <h1 class=" col-md-10 text-center">കുടുംബ പ്രാര്‍ത്ഥന</h1>
+            <div class="col-md-1">
+            </div>
+        </div>
         <div class="d-none d-lg-block d-xl-block">
             Trouble viewing contents in Malayalam font? <a href="https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%B9%E0%B4%BE%E0%B4%AF%E0%B4%82:To_Read_in_Malayalam">Please
                 setup the computer to use unicode Malayalam font.</a>
@@ -42,11 +49,12 @@
         <div class="row">
             <div class="col-md-8 fb-comments" data-href="http://www.joymononline.in/apps/prayerbook/index.html"
                 data-numposts="5"></div>
-            <button class="col-md-2 btn btn-link" disabled="disabled">Total visitors : {{pageviews}}</buttton>
-                <button class="col-md-2 btn btn-link text-right" ng-click="showCredits()"> Team PrayerBook</button>
+            <button class="col-md-2 btn btn-link" disabled="disabled">Total visitors : {{pageviews}}</button>
+            <button class="col-md-2 btn btn-link text-right" ng-click="showCredits()"> Team PrayerBook</button>
         </div>
 
-        <div class="text-center">Copyright © 2018 by <a href="http://www.joymononline.in">JoymonOnline</a> - Version
+        <div class="text-center">Copyright © 2018 by <a href="http://www.joymononline.in">JoymonOnline</a> -
+            Version
             <ng-include src="'views/version.html'"></ng-include>
         </div>
     </div>
