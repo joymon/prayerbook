@@ -3,12 +3,15 @@ const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
   // entry: path.resolve(__dirname, "src/JS/app.js")
-  entry: "./src/js/app.js"
-  ,
+  entry: "./src/js/app.js",
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
   },
+  resolve: {
+    extensions: [".webpack.js", ".web.js", ".ts", ".js"]
+  },
+
   optimization: {
     splitChunks: {
       chunks: "all",
@@ -28,9 +31,11 @@ module.exports = {
     }
   },
   module: {
-    rules:[
-        { test: /\.css$/, loaders: ['style-loader', 'css-loader']}
-    ]},
+    rules: [
+      { test: /\.ts$/, loader: "ts-loader" },
+      { test: /\.css$/, loaders: ["style-loader", "css-loader"] }
+    ]
+  },
   plugins: [
     //new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'dist/vendor.bundle.js'}),
     new CopyWebpackPlugin([
