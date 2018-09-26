@@ -22,11 +22,6 @@ module.exports = {
           name: "vendors",
           chunks: "all"
         }
-        //     vendor: {
-        //       test: "dist/vendor.bundle.js",
-        //       name: "vendor",
-        //       chunks: "initial"
-        //     }
       }
     }
   },
@@ -77,6 +72,11 @@ module.exports = {
       {
         from: "src/images",
         to: "./images",
+        flatten: true
+      },
+      {
+        from: "src/*.ico",
+        to: ".",
         flatten: true
       }
     ])
