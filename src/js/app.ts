@@ -8,6 +8,7 @@ require("./fbComments");
 require("./serviceworker-reg.ts");
 
 import GAAPI from "./services/GAAPI";
+import prayerService from "./services/prayerService";
 import DevCreditsCtrl from "./controllers/DevCreditsCtrl";
 import MainCtrl from "./controllers/MainCtrl";
 
@@ -21,6 +22,7 @@ app.config(['$sceDelegateProvider' , function($sceDelegateProvider) {
   ]);
 }]);
 app.service("GAAPI", ["$http", "$sce", GAAPI]);
+app.service("PrayerService", ["$http",  prayerService]);
 app.controller("MainCtrl", [
   "$scope",
   "$http",
