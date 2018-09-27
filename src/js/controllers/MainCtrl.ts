@@ -1,3 +1,4 @@
+import angular =require( "angular");
 export default function MainCtrl($scope, $http, $sce, $modal, GAAPI) {
   $scope.prayers = [];
   $http.get("data/prayers.json").then(function(response) {

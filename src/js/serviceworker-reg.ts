@@ -1,7 +1,7 @@
-window.addEventListener("beforeinstallprompt", e => {
-    e.prompt();
+window.addEventListener("beforeinstallprompt", (event:any) => {
+    event.prompt();
     // Wait for the user to respond to the prompt
-    e.userChoice.then(choiceResult => {
+    event.userChoice.then(choiceResult => {
       if (choiceResult.outcome === "accepted") {
         console.log("User accepted to install");
       } else {
@@ -9,7 +9,7 @@ window.addEventListener("beforeinstallprompt", e => {
       }
     });
   });
-  window.addEventListener('appinstalled', (evt) => {
+  window.addEventListener('appinstalled', (event) => {
     console.log('a2hs', 'installed');
   });
   if ("serviceWorker" in navigator) {

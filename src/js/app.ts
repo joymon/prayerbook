@@ -1,11 +1,11 @@
-import angular from "angular";
+import angular =require( "angular");
 import 'bootstrap'
-import uibootstrap from "angular-ui-bootstrap";
-import sanitize from "angular-sanitize";
+import uibootstrap =require ("angular-ui-bootstrap");
+import sanitize =require("angular-sanitize");
 import 'bootstrap/dist/css/bootstrap.min.css'
-require("./ga.js");
-require("./fbComments.js");
-require("./serviceworker-reg");
+require("./ga");
+require("./fbComments");
+require("./serviceworker-reg.ts");
 
 import GAAPI from "./services/GAAPI";
 import DevCreditsCtrl from "./controllers/DevCreditsCtrl";
