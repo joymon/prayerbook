@@ -1,6 +1,6 @@
 {
   "name": "prayerbook",
-  "version": "0.0.1253",
+  "version": "0.0.1254",
   "private": true,
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
     "dev": "./node_modules/.bin/webpack --mode development",
     "start": "./node_modules/.bin/webpack-dev-server --open",
     "test": "./node_modules/.bin/karma start tests/karma.config.js --single-run",
-    "devtest": "./node_modules/.bin/karma start tests/karma.config.js",
+    "devTest": "./node_modules/.bin/karma start tests/karma.config.js",
     "patch": "node build/patchVersion.js",
     "build": "./node_modules/.bin/webpack-cli --mode production --config webpack.config.js"
   },
