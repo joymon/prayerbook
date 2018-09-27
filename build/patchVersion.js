@@ -13,7 +13,7 @@ fs.readFile(swPath, 'utf8', function (err,data) {
     if (err) {
       return console.log(err);
     }
-    var result = data.replace(/v(\d+.)(\d+.)(\d+)/g, pack.version);
+    var result = data.replace(/v(\d+.)(\d+.)(\d+)/g, 'v'+pack.version);
   
     fs.writeFile(swPath, result, 'utf8', function (err) {
        if (err) return console.log(err);
