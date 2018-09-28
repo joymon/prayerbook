@@ -5,15 +5,15 @@ describe("GAAPITest", function() {
     httpBackend = $http;
     GAAPI = _GAAPI_;
   }));
-  it("Sould return API data when GAAPI is called", function() {
+  it("Should return API data when GAAPI is called", function() {
     var result = 0;
     GAAPI.getPageViews().then(data => {
+      console.log("Should return API data when GAAPI is called : " + GAAPI);
       expect(data).toBeTruthy(result);
     });
-    console.log("Should return API data when GAAPI is called : " + GAAPI);
+    
   });
   it("Should return > 0 result when GAAPI is called", function() {
-    var result = 0;
     GAAPI.getPageViews().then(response => {
       console.log(
         "Should return > 0 result when GAAPI is called. value" +
