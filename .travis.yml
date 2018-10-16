@@ -1,4 +1,4 @@
-if: commit_message != "Deploy joymon/prayerbook to github.com/joymon/prayerbook.git:master"
+if: commit_message != "Deploy joymon/prayerbook to github.com/joymon/prayerbook.git:master" OR tag = true
 language: node_js
 node_js:
   - "stable"
