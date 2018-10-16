@@ -15,14 +15,9 @@ This is a prayer book intended for personal prayers. Currently it supports Chris
  1. https://github.com/joymon/PrayerBook/archive/master.zip
 
 # Running the application
-
-1. Without a server
- 1. Double click on the index.html file present in the \src folder.
- 2. It will start your default browser and load the page there.
- 3. There will be a popup asking for permission to run JavaScript. Enable it as this is a JavaScript based application.
-2. With a web server 
- 1. Copy the src folder into the root folder of web server
- 2. Browser to http://localhost/src/index.html. Mostly there won't be any need to enabling JavaScript
+1. With a dev web server 
+ 1. Run the command `npm run start`
+ 2. Browser will be opened with application.
 
 # How to contribute 
 1. This require an account in www.github.com. Its free for open source projects.
