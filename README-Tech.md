@@ -1,6 +1,7 @@
 # Technologies
 
 - AngularJS
+- Bootstrap
 
 # Deployment
 
