@@ -1,3 +1,7 @@
+# Technologies
+
+- AngularJS
+
 # Deployment
 
 Uses Travis-CI for deployment. When there is no GitHub tag, it release to [https://joymon.github.io\prayerbook](https://joymon.github.io\prayerbook).
