@@ -1,4 +1,4 @@
-import angular =require( "angular");
+import angular = require("angular");
 export default function MainCtrl($scope, $http, $sce, $modal, GAAPI) {
   $scope.prayers = [];
   $http.get("data/prayers.json").then(function(response) {
@@ -11,6 +11,7 @@ export default function MainCtrl($scope, $http, $sce, $modal, GAAPI) {
   GAAPI.getPageViews().then(function(response) {
     $scope.pageviews = response.data.rows[0][0];
   });
+  $scope.isOnline = navigator.onLine;
   function downloadPrayerContent(prayer) {
     var path = "data/" + prayer.path;
     $http.get(path).then(function(response) {
