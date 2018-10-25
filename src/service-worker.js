@@ -2,6 +2,7 @@ var CACHE_NAME = "pb-site-cache-v0.0.1264";
 var urlsToCache = [
   "/",
   "index.html",
+  "views/modals/devCredits.html",
   "main.bundle.js",
   "vendors.bundle.js"
 ];
