@@ -1,4 +1,4 @@
-var CACHE_NAME = "pb-site-cache-v0.0.1266";
+var CACHE_NAME = "pb-site-cache-v0.0.1267";
 var urlsToCache = [
   "/",
   "index.html",
