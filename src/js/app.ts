@@ -9,7 +9,7 @@ import GAAPI from "./services/GAAPI";
 import prayerService from "./services/prayerService";
 import DevCreditsCtrl from "./controllers/DevCreditsCtrl";
 import MainCtrl from "./controllers/MainCtrl";
-
+import {PrayerModule} from './controllers/prayers.component'
 export default function load () {
   var app = angular.module("prayerBook", [uibootstrap, sanitize]);
   app.config([
@@ -38,5 +38,6 @@ export default function load () {
     "$uibModalInstance",
     DevCreditsCtrl
   ]);
+  app.component('prayers',new PrayerModule.PrayerComponent());
   angular.bootstrap(document, ['prayerBook']);
 }
