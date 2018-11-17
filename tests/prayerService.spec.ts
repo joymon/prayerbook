@@ -1,6 +1,8 @@
+import * as angular from "angular";
+import "angular-mocks";
 describe("PrayerServiceTest", function() {
   var httpBackend, prayerService;
-  beforeEach(module("prayerBook"));
+  beforeEach(angular.mock.module("prayerBook"));
   beforeEach(inject(function(_PrayerService_, $http) {
     httpBackend = $http;
     prayerService = _PrayerService_;

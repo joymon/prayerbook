@@ -18,6 +18,7 @@ export default class ServiceWorkerRegistration {
   }
   public register(handler: Function): void {
     if ("serviceWorker" in navigator) {
+      console.log("[sw-reg] ServiceWorker supported. Going to register");
       navigator.serviceWorker.register("service-worker.js").then(function(reg) {
         console.log("[sw-reg] ServiceWorker registered at scope " + reg.scope);
       });

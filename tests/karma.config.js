@@ -1,36 +1,36 @@
 // Karma configuration
 // Generated on Tue Nov 03 2015 13:43:21 GMT-0500 (Eastern Standard Time)
-const puppeteer = require('puppeteer');
+const puppeteer = require("puppeteer");
 process.env.CHROME_BIN = puppeteer.executablePath();
 
 module.exports = function(config) {
   config.set({
-
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: "",
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ["jasmine", "karma-typescript"],
     // list of files / patterns to load in the browser
     files: [
-      '../dist/vendors.bundle.js',
-      '../dist/main.bundle.js',
-      '../node_modules/angular-mocks/angular-mocks.js',
-      '../tests/*Test.js'
+      "../dist/vendors.bundle.js",
+      "../dist/main.bundle.js",
+      // "../node_modules/angular-mocks/angular-mocks.js",
+      '../tests/*Test.js',
+      "../tests/*.spec.ts"
     ],
     // list of files to exclude
-    exclude: [
-    ],
+    exclude: [],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      "../tests/*spec.ts": ["karma-typescript"]
     },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['spec'],
+    reporters: ["spec"],
 
     // web server port
     port: 9876,
@@ -46,27 +46,30 @@ module.exports = function(config) {
     autoWatch: true,
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['ChromeHeadless','ChromeHeadlessNoSandbox'],
+    browsers: ["ChromeHeadless"
+    , "ChromeHeadlessNoSandbox"
+    ],
     customLaunchers: {
-      'ChromeHeadless': {
-        base: 'Chrome',
+      ChromeHeadless: {
+        base: "Chrome",
         flags: [
-            '--headless',
-            '--disable-gpu',
-            // Without a remote debugging port, Google Chrome exits immediately.
-            '--remote-debugging-port=9222'
+          "--headless",
+          "--disable-gpu",
+          // Without a remote debugging port, Google Chrome exits immediately.
+          "--remote-debugging-port=9222"
         ],
         debug: true
-    },
-      ChromeHeadlessNoSandbox: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
       }
+      ,   ChromeHeadlessNoSandbox: {
+          base: 'ChromeHeadless',
+          flags: ['--no-sandbox']
+        }
     },
     plugins: [
-      'karma-jasmine',
-      'karma-chrome-launcher',
-      "karma-spec-reporter"
+      "karma-jasmine",
+      "karma-chrome-launcher",
+      "karma-spec-reporter",
+      "karma-typescript"
     ],
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -75,5 +78,5 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultanous
     concurrency: Infinity
-  })
-}
+  });
+};

@@ -1,6 +1,8 @@
 var webpack = require("webpack");
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 module.exports = {
   // entry: path.resolve(__dirname, "src/JS/app.js")
   entry: "./src/js/bootstrap.ts",
@@ -19,6 +21,11 @@ module.exports = {
       //   name: true,
       cacheGroups: {
         commons: {
+          // test(module,chunks){
+          //   console.log(` joylog`);
+          //   console.log(module);
+          //   return module.type === 'javascript/auto'
+          // }
           test: /[\\/]node_modules[\\/]/,
           name: "vendors",
           chunks: "all"
@@ -34,6 +41,7 @@ module.exports = {
   },
   plugins: [
     //new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'dist/vendor.bundle.js'}),
+    new BundleAnalyzerPlugin({analyzerMode:'static',openAnalyzer:false}),
     new CopyWebpackPlugin([
       {
         from: "src/views/*.html",
