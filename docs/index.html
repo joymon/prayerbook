@@ -31,24 +31,16 @@
             Trouble viewing contents in Malayalam font? <a href="https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%B9%E0%B4%BE%E0%B4%AF%E0%B4%82:To_Read_in_Malayalam">Please
                 setup the computer to use unicode Malayalam font.</a>
         </div>
+        <div class="small alert alert-warning" ng-show="!isOnline">
+            ഇപ്പോൾ ഇന്റർനെറ്റ് ലഭ്യമല്ലാത്തതു കൊണ്ട് അത്യാവശ്യം വേണ്ടുന്ന സേവനങ്ങൾ മാത്രമേ പ്രവർത്തിക്കുകയുള്ളൂ. മുഴുവൻ സേവനങ്ങളും ലഭിക്കുന്നതിന് ഇന്റർനെറ്റ് ലഭ്യമാക്കുക.
+        </div>
         <div class="d-lg-none .d-xl-block" ng-show="isOnline">
             <a href="https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%B9%E0%B4%BE%E0%B4%AF%E0%B4%82:To_Read_in_Malayalam">Malayalam
                 unicode font</a>
         </div>
         <prayers></prayers>
-        <!-- <div id="accordion">
-            <div class="card" ng-repeat="prayer in prayers track by $index">
-                <button class="card-header" ng-bind-html="renderHTML(prayer.title)" class="btn" data-toggle="collapse"
-                    data-target="{{'#c'+$index}}">
-                    <span></span>
-                </button>
-                <div id="{{'c' + $index}}" class="collapse" data-parent="#accordion">
-                    <div class="card-body" ng-bind-html="renderHTML(prayer.content)"></div>
-                </div>
-            </div>
-        </div> -->
 
-        <div class="fb-comments" data-href="http://www.joymononline.in/apps/prayerbook/index.html"
+        <div class="fb-comments" data-href="http://www.joymononline.in/apps/prayerbook/index.html" ng-show="isOnline"
             data-numposts="5"></div>
         <div class="d-flex justify-content-between">
             <button class="btn btn-link" disabled="disabled">Total visitors : {{pageviews}}</button>
