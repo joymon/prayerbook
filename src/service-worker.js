@@ -1,8 +1,10 @@
 var CACHE_NAME = "pb-site-cache-v0.0.1267";
 var urlsToCache = [
   "/",
+  "/favicon.ico",
   "index.html",
   "views/modals/devCredits.html",
+  "views/prayers.component.html",
   "main.bundle.js",
   "vendors.bundle.js"
 ];
