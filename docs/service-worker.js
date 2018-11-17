@@ -1,4 +1,4 @@
-var CACHE_NAME = "pb-site-cache-v0.0.1267";
+var CACHE_NAME = "pb-site-cache-v0.0.1268";
 var urlsToCache = [
   "/",
   "index.html",
@@ -8,22 +8,28 @@ var urlsToCache = [
 ];
 self.addEventListener("install", function(event) {
   // Perform install steps
-  console.log("[ServiceWorker] Install");
+  console.log("[Service-Worker] Install");
   event.waitUntil(
     caches.open(CACHE_NAME).then(function(cache) {
-      console.log("[ServiceWorker] Install - New cache created. Name" + CACHE_NAME);
+      console.log(
+        "[Service-Worker] Install - New cache created. Name" + CACHE_NAME
+      );
       return cache.addAll(urlsToCache);
     })
   );
 });
 self.addEventListener("activate", function(e) {
-  console.log("[ServiceWorker] Activate");
+  console.log("[Service-Worker] Activate");
+  send_message_to_all_clients("activated");
   e.waitUntil(
     caches.keys().then(function(keyList) {
       return Promise.all(
         keyList.map(function(key) {
           if (key !== CACHE_NAME) {
-            console.log("[ServiceWorker] Removing old cache as new SW activated. key = "+ key);
+            console.log(
+              "[Service-Worker] Removing old cache as new SW activated. key = " +
+                key
+            );
             return caches.delete(key);
           }
         })
@@ -34,7 +40,10 @@ self.addEventListener("activate", function(e) {
 });
 self.addEventListener("fetch", function(event) {
   //console.log("[ServiceWorker] Fetch", event.request.url);
-  if (event.request.url.indexOf("http") === 0 && event.request.method === 'GET') {
+  if (
+    event.request.url.indexOf("http") === 0 &&
+    event.request.method === "GET"
+  ) {
     event.respondWith(
       caches.open(CACHE_NAME).then(function(cache) {
         return cache.match(event.request).then(function(cachedResponse) {
@@ -42,7 +51,10 @@ self.addEventListener("fetch", function(event) {
             cachedResponse ||
             fetch(event.request).then(function(liveResponse) {
               cache.put(event.request, liveResponse.clone());
-              console.log("Obtained from internet and put into cache for the url "+ event.request.url);
+              console.log(
+                "Obtained from internet and put into cache for the url " +
+                  event.request.url
+              );
               return liveResponse;
             })
           );
@@ -53,3 +65,31 @@ self.addEventListener("fetch", function(event) {
     console.log("cancel somehow as its chrome://");
   }
 });
+self.addEventListener('message', function(event){
+  console.log("[Service-Worker]  Received Message: " + event.data + " .Responding Hello back!");
+  event.ports[0].postMessage("SW Says 'Hello back!'");
+});
+function send_message_to_all_clients(msg) {
+  clients.matchAll().then(matchedClients => {
+    console.log(`[Service-Worker] broad casting message ${matchedClients.length}`);
+    matchedClients.forEach(client => {
+      send_message_to_client(client, msg).then(m =>
+        console.log("[Service-Worker] Received Message: " + m)
+      );
+    });
+  });
+}
+
+function send_message_to_client(client, msg) {
+  return new Promise(function(resolve, reject) {
+    var msg_chan = new MessageChannel();
+    msg_chan.port1.onmessage = function(event) {
+      if (event.data.error) {
+        reject(event.data.error);
+      } else {
+        resolve(event.data);
+      }
+    };
+    client.postMessage("SW Says: '" + msg + "'", [msg_chan.port2]);
+  });
+}
