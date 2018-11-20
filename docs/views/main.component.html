@@ -1,0 +1,30 @@
+<div id="fb-root"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+                <img class="img-fluid d-none d-lg-block d-xl-block" src="images/icon-192.jpg" />
+                <!-- <img class="img-fluid d-lg-none .d-xl-block" src="images/icon-48.jpg"/> -->
+            </div>
+            <h1 class=" col-md-10 text-center">കുടുംബ പ്രാര്‍ത്ഥന</h1>
+            <div class="col-md-1">
+            </div>
+        </div>
+        <div class="d-none d-lg-block d-xl-block" ng-show="$ctrl.isOnline">
+            Trouble viewing contents in Malayalam font? <a href="https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%B9%E0%B4%BE%E0%B4%AF%E0%B4%82:To_Read_in_Malayalam">Please
+                setup the computer to use unicode Malayalam font.</a>
+        </div>
+        <div class="small alert alert-warning" ng-show="!$ctrl.isOnline">
+            ഇപ്പോൾ ഇന്റർനെറ്റ് ലഭ്യമല്ലാത്തതു കൊണ്ട് അത്യാവശ്യം വേണ്ടുന്ന സേവനങ്ങൾ മാത്രമേ പ്രവർത്തിക്കുകയുള്ളൂ. മുഴുവൻ സേവനങ്ങളും ലഭിക്കുന്നതിന് ഇന്റർനെറ്റ് ലഭ്യമാക്കുക.
+        </div>
+        <div class="d-lg-none .d-xl-block" ng-show="$ctrl.isOnline">
+            <a href="https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%B9%E0%B4%BE%E0%B4%AF%E0%B4%82:To_Read_in_Malayalam">Malayalam
+                unicode font</a>
+        </div>
+        <prayers></prayers>
+
+        <div class="fb-comments" data-href="http://www.joymononline.in/apps/prayerbook/index.html" ng-show="$ctrl.isOnline"
+            data-numposts="5"></div>
+        <div class="d-flex justify-content-between">
+            <button class="btn btn-link" disabled="disabled">Total visitors : {{$ctrl.pageviews}}</button>
+            <button class="btn btn-link text-right" ng-click="$ctrl.showCredits()"> Team PrayerBook</button>
+        </div>
