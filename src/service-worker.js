@@ -1,4 +1,4 @@
-var CACHE_NAME = "pb-site-cache-v0.0.1271";
+var CACHE_NAME = "pb-site-cache-v0.0.1272";
 var urlsToCache = [
   "/",
   "favicon.ico",
