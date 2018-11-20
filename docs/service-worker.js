@@ -1,7 +1,7 @@
-var CACHE_NAME = "pb-site-cache-v0.0.1269";
+var CACHE_NAME = "pb-site-cache-v0.0.1270";
 var urlsToCache = [
   "/",
-  "/favicon.ico",
+  "favicon.ico",
   "index.html",
   "views/modals/devCredits.html",
   "views/prayers.component.html",
