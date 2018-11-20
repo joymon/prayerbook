@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/angular": "^1.6.51",
     "@types/angular-mocks": "^1.7.0",
+    "@types/angular-ui-bootstrap": "^0.13.47",
     "@types/jasmine": "^2.8.11",
     "@types/node": "^10.11.0",
     "angular": "^1.7.4",
