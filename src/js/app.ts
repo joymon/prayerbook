@@ -12,7 +12,7 @@ import { PrayerModule } from "./controllers/prayers.component";
 import MainComponent from "./controllers/main.component";
 export default class App {
   public load(): void {
-    var app = angular.module("prayerBook", [uibootstrap, sanitize]);
+    var app = angular.module("prayerBook", [uibootstrap,sanitize]);
     app.config([
       "$sceDelegateProvider",
       function($sceDelegateProvider) {

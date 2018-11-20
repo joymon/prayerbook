@@ -1,5 +1,6 @@
 import GAAPIService from "../services/GAAPI";
 import { IHttpService, ui } from "angular";
+import { IModalInstanceService } from "angular-ui-bootstrap";
 export default class MainComponent implements ng.IComponentOptions {
   public templateUrl: string;
   public controller: any;
@@ -32,14 +33,19 @@ export class MainController implements ng.IController {
     let modelSettings: ui.bootstrap.IModalSettings = {};
     modelSettings.component = "devcredits";
     //modelSettings.controller = "DevCreditsCtrl";
+    modelSettings.animation = true;
     //modelSettings.templateUrl = "./views/modals/devCredits.html";
-    modelSettings.size = "sm";
-    //modelSettings.resolve = {};
-
-    var modalInstance = this.modal.open(modelSettings);
-
+    //modelSettings.template = "<div><h1>I am modal</h1></div>"
+    modelSettings.size = "lg";
+    modelSettings.resolve = {};
+    modelSettings.windowClass ='show';
+    
+    var modalInstance:IModalInstanceService = this.modal.open(modelSettings);
+    modalInstance.rendered.then(()=>console.log(' modal redered'));
+    modalInstance.opened.then((value)=>console.log(' modal opened'))
     modalInstance.result.then(
       selectedItem => {
+        
         console.log("something selected");
       },
       reason => {
