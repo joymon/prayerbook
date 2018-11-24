@@ -7,9 +7,11 @@ require("./ga");
 require("./fbComments");
 import GAAPI from "./services/GAAPI";
 import prayerService from "./services/prayerService";
-import DevCreditsCtrl from "./controllers/DevCredits.component";
-import { PrayerModule } from "./controllers/prayers.component";
+import DevCreditsComponent from "./controllers/DevCredits.component";
+import { PrayerComponent } from "./controllers/prayers.component";
 import MainComponent from "./controllers/main.component";
+import InternetMonitoringService from "./services/InternetMonitoringService"
+  import { format } from "util";
 export default class App {
   public load(): void {
     var app = angular.module("prayerBook", [uibootstrap,sanitize]);
@@ -26,21 +28,10 @@ export default class App {
     ]);
     app.service("GAAPI", ["$http", "$sce", GAAPI]);
     app.service("PrayerService", ["$http", prayerService]);
-    // app.controller("MainCtrl", [
-    //   "$scope",
-    //   "$http",
-    //   "$sce",
-    //   "$uibModal",
-    //   "GAAPI",
-    //   MainCtrl
-    // ]);
-    // app.controller("DevCreditsCtrl", [
-    //   "$scope",
-    //   "$uibModalInstance",
-    //   DevCreditsCtrl
-    // ]);
-    app.component("devcredits", new DevCreditsCtrl());
-    app.component("prayers", new PrayerModule.PrayerComponent());
+app.service("InternetMonitoringService",InternetMonitoringService);
+
+    app.component("devcredits", new DevCreditsComponent());
+    app.component("prayers", new PrayerComponent());
     app.component("main", new MainComponent());
     angular.bootstrap(document, ["prayerBook"]);
   }

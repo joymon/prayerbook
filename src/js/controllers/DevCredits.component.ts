@@ -1,5 +1,3 @@
-import { ui } from "angular";
-
 export default class DevCreditsComponent implements ng.IComponentOptions {
   public templateUrl: string;
   public controller: any;
@@ -12,7 +10,10 @@ export default class DevCreditsComponent implements ng.IComponentOptions {
     }
   }
 }
+
 export class DevCreditsController implements ng.IController {
+  // the modalInstance gets a value magically only if it is used inside a component and its hosted as modal dialog.
+  // No injection required.
   private modalInstance: ng.ui.bootstrap.IModalInstanceService;
   public ok(): void {
     this.modalInstance.close();

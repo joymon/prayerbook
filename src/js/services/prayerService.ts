@@ -1,5 +1,4 @@
 import { IHttpService, IPromise, IHttpResponse } from "angular";
-import { PrayerModule } from "../controllers/prayers.component";
 import { PrayerBook } from "../controllers/prayer";
 
 export default class PrayerService {
