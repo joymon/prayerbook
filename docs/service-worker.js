@@ -1,4 +1,6 @@
-var CACHE_NAME = "pb-site-cache-v0.0.1272";
+//Below version will be patched by the \build with latest build number.
+var CACHE_NAME = "pb-site-cache-v0.0.1273";
+
 var urlsToCache = [
   "/",
   "favicon.ico",

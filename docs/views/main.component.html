@@ -28,7 +28,8 @@
   <div class="d-lg-none .d-xl-block" ng-show="$ctrl.isOnline">
     <a
       href="https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%B9%E0%B4%BE%E0%B4%AF%E0%B4%82:To_Read_in_Malayalam"
-      >Malayalam unicode font</a
+    >
+      Malayalam unicode font</a
     >
   </div>
   <prayers></prayers>
@@ -47,4 +48,10 @@
       Team PrayerBook
     </button>
   </div>
+</div>
+<div class="text-center">
+  Copyright © 2018 by
+  <a href="http://www.joymononline.in" ng-show="$ctrl.isOnline">JoymonOnline</a>
+  <span ng-show="!$ctrl.isOnline">JoymonOnline</span> - Version
+  <ng-include src="'views/version.html'"></ng-include>
 </div>
