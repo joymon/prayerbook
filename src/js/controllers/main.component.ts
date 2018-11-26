@@ -12,8 +12,9 @@ export default class MainComponent implements ng.IComponentOptions {
 }
 
 export class MainController implements ng.IController {
-  static $inject = ["$uibModal", "GAAPI","InternetMonitoringService"];
+  static $inject = ["$scope","$uibModal", "GAAPI","InternetMonitoringService"];
   constructor(
+    private $scope:ng.IScope,
     private $modal: ui.bootstrap.IModalService,
     private GAAPI: GAAPIService,
     private internetMonitoringService:InternetMonitoringService
@@ -24,6 +25,7 @@ export class MainController implements ng.IController {
     });
     this.internetMonitoringService.subscribe((isConnected)=>{
       this.isOnline = isConnected;
+      this.$scope.$apply();
     });
   }
   public pageviews: number;

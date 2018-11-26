@@ -28,7 +28,7 @@ export default class App {
     ]);
     app.service("GAAPI", ["$http", "$sce", GAAPI]);
     app.service("PrayerService", ["$http", prayerService]);
-app.service("InternetMonitoringService",InternetMonitoringService);
+    app.service("InternetMonitoringService",InternetMonitoringService);
 
     app.component("devcredits", new DevCreditsComponent());
     app.component("prayers", new PrayerComponent());
