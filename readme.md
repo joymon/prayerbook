@@ -15,9 +15,16 @@ This is a prayer book intended for personal prayers. Currently it supports Chris
  1. https://github.com/joymon/PrayerBook/archive/master.zip
 
 # Running the application
-1. With a dev web server 
- 1. Run the command `npm run start`
- 2. Browser will be opened with application.
+1. With a dev web server
+ 1. Run the command `npm run dev` to build. 
+ 2. Run the command `npm run start`
+ 3. Browser will be opened with application.
+
+# Running the tests
+## One time test
+1. Run the command `npm test` to build. 
+## Continuous run during development
+1. Run the command `npm run devTest` to build. 
 
 # How to contribute 
 1. This require an account in www.github.com. Its free for open source projects.
