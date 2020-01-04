@@ -20,7 +20,7 @@ This is a prayer book intended for personal prayers. Currently it supports Chris
 
 # Running the application
 1. With a dev web server
- 1. Run the command `npm run dev` to build. 
+ 1. Run the command `npm run devBuild` to build. 
  2. Run the command `npm run start`
  3. Browser will be opened with application.
 

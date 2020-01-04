@@ -7,7 +7,7 @@
     "url": "https://github.com/joymon/PrayerBook.git"
   },
   "scripts": {
-    "dev": "./node_modules/.bin/webpack --mode development",
+    "devBuild": "./node_modules/.bin/webpack --mode development",
     "start": "./node_modules/.bin/webpack-dev-server --open",
     "test": "./node_modules/.bin/karma start tests/karma.config.js --single-run",
     "devTest": "./node_modules/.bin/karma start tests/karma.config.js",
