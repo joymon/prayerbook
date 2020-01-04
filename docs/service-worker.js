@@ -1,5 +1,5 @@
 //Below version will be patched by the \build with latest build number.
-var CACHE_NAME = "pb-site-cache-v0.0.1279";
+var CACHE_NAME = "pb-site-cache-v0.0.1280";
 
 var urlsToCache = [
   "/",
