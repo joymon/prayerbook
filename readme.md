@@ -30,6 +30,11 @@ This is a prayer book intended for personal prayers. Currently it supports Chris
 ## Continuous run during development
 1. Run the command `npm run devTest` to build. 
 
+# Hosting
+
+- Development version hosted at [https://joymon.github.io/prayerbook/](https://joymon.github.io/prayerbook/)
+- Production at [https://prayerbook.github.io/](https://prayerbook.github.io/)
+
 # How to contribute 
 1. This require an account in www.github.com. Its free for open source projects.
 2. Fork this repository. It will create a copy of this project source code in your account.
