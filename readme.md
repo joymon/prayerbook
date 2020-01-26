@@ -34,7 +34,7 @@ This is a prayer book intended for personal prayers. Currently it supports Chris
 ## Continuous run during development
 1. Run the command `npm run devTest` to build. 
 
-# Deplying to production
+# Deploying to production
 
 - Create a release.
 - Release create a tag and Travis CI will release when there is a tag.
