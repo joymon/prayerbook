@@ -41,7 +41,7 @@ export class MainController implements ng.IController {
     
     var modalInstance:IModalInstanceService = this.$modal.open(modelSettings);
     modalInstance.rendered.then(()=>console.log(' modal redered'));
-    modalInstance.opened.then((value)=>console.log(' modal opened'))
+    modalInstance.opened.then((value)=>console.log(' modal opened'));
     modalInstance.result.then(
       selectedItem => {
         console.log("something selected");
