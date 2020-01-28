@@ -22,7 +22,6 @@ import { PrayerBook } from "./prayer";
     }
     downloadPrayerContent(prayer): void {
       var path = "data/" + prayer.path;
-      let myThis: PrayerController = this;
       this.http.get<string>(path).then(function(response) {
         prayer.content = response.data;
       });
