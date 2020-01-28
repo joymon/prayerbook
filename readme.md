@@ -2,6 +2,7 @@ Build - [![Build Status](https://travis-ci.org/joymon/prayerbook.svg)](https://t
 
 Codebase - [![Known Vulnerabilities](https://snyk.io/test/github/joymon/prayerbook/badge.svg?targetFile=package.json)](https://snyk.io/test/github/joymon/prayerbook?targetFile=package.json)
 [![Maintainability](https://api.codeclimate.com/v1/badges/15c9bcf2a0f9a4363804/maintainability)](https://codeclimate.com/github/joymon/PrayerBook/maintainability)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/joymon/prayerbook.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/joymon/prayerbook/alerts/)
 
 Deploy - [![Deploy Status](https://travis-ci.org/joymon/prayerbook.svg)](https://travis-ci.org/joymon/prayerbook)
 
