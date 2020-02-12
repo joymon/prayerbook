@@ -1,6 +1,6 @@
 {
   "name": "prayerbook",
-  "version": "0.0.1290",
+  "version": "0.0.1291",
   "private": true,
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
     "test": "./node_modules/.bin/karma start tests/karma.config.js --single-run",
     "devTest": "./node_modules/.bin/karma start tests/karma.config.js",
     "webdriver:update": "node ./node_modules/protractor/bin/webdriver-manager update",
-    "protractor":"./node_modules/.bin/protractor protractor.config.js",
+    "protractor": "./node_modules/.bin/protractor protractor.config.js",
     "integrationTest": "npm-run-all -p -r  serve protractor",
     "patch": "node build/patchVersion.js",
     "build": "./node_modules/.bin/webpack-cli --mode production --config webpack.config.js"
