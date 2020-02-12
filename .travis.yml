@@ -12,6 +12,9 @@ before_script:
   - npm version patch
   - npm run patch
   - npm run build
+script:
+  - npm test
+  - npm run integrationTest
 after_success: 
   - rm -rf docs
   - cp -R dist docs/
