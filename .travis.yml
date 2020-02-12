@@ -14,6 +14,7 @@ before_script:
   - npm run build
 script:
   - npm test
+  - npm run webdriver:update
   - npm run integrationTest
 after_success: 
   - rm -rf docs
