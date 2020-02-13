@@ -1,7 +1,7 @@
 | Area | Badges |
 |:---|---|
 | Build | [![Build Status](https://travis-ci.org/joymon/prayerbook.svg)](https://travis-ci.org/joymon/prayerbook)|
-| Code | ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/joymon/prayerbook) ![GitHub repo size](https://img.shields.io/github/repo-size/joymon/prayerbook)  |
+| Code | ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/joymon/prayerbook) ![GitHub repo size](https://img.shields.io/github/repo-size/joymon/prayerbook)[![](https://tokei.rs/b1/github/joymon/prayerbook)](https://github.com/joymon/prayerbook)  |
 | Code quality | [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/joymon/prayerbook.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/joymon/prayerbook/context:javascript)[![Maintainability](https://api.codeclimate.com/v1/badges/15c9bcf2a0f9a4363804/maintainability)](https://codeclimate.com/github/joymon/PrayerBook/maintainability)
 | Deps | [![dependencies](https://david-dm.org/joymon/prayerbook.svg)](https://david-dm.org/joymon/prayerbook)|
 | Security | [![Known Vulnerabilities](https://snyk.io/test/github/joymon/prayerbook/badge.svg?targetFile=package.json)](https://snyk.io/test/github/joymon/prayerbook?targetFile=package.json)[![Total alerts](https://img.shields.io/lgtm/alerts/g/joymon/prayerbook.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/joymon/prayerbook/alerts/) |
