@@ -11,7 +11,6 @@ import DevCreditsComponent from "./controllers/DevCredits.component";
 import { PrayerComponent } from "./controllers/prayers.component";
 import MainComponent from "./controllers/main.component";
 import InternetMonitoringService from "./services/InternetMonitoringService"
-  import { format } from "util";
 export default class App {
   public load(): void {
     var app = angular.module("prayerBook", [uibootstrap,sanitize]);

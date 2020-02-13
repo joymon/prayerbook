@@ -1,5 +1,5 @@
 import GAAPIService from "../services/GAAPI";
-import { IHttpService, ui } from "angular";
+import {  ui } from "angular";
 import { IModalInstanceService } from "angular-ui-bootstrap";
 import InternetMonitoringService from "../services/InternetMonitoringService"
 export default class MainComponent implements ng.IComponentOptions {

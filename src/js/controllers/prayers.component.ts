@@ -1,4 +1,4 @@
-import { IHttpService, IHttpResponse, ISCEService } from "angular";
+import { IHttpService,  ISCEService } from "angular";
 import PrayerService from "../services/prayerService";
 import { PrayerBook } from "./prayer";
 
