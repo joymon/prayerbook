@@ -2,9 +2,9 @@
 |:---|---|
 | Build | [![Build Status](https://travis-ci.org/joymon/prayerbook.svg)](https://travis-ci.org/joymon/prayerbook)|
 | Code | ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/joymon/prayerbook) ![GitHub repo size](https://img.shields.io/github/repo-size/joymon/prayerbook)  |
-| Code quality | [![Known Vulnerabilities](https://snyk.io/test/github/joymon/prayerbook/badge.svg?targetFile=package.json)](https://snyk.io/test/github/joymon/prayerbook?targetFile=package.json)[![Maintainability](https://api.codeclimate.com/v1/badges/15c9bcf2a0f9a4363804/maintainability)](https://codeclimate.com/github/joymon/PrayerBook/maintainability)
+| Code quality | [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/joymon/prayerbook.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/joymon/prayerbook/context:javascript)[![Maintainability](https://api.codeclimate.com/v1/badges/15c9bcf2a0f9a4363804/maintainability)](https://codeclimate.com/github/joymon/PrayerBook/maintainability)
 | Deps | [![dependencies](https://david-dm.org/joymon/prayerbook.svg)](https://david-dm.org/joymon/prayerbook)|
-| Security | [![Total alerts](https://img.shields.io/lgtm/alerts/g/joymon/prayerbook.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/joymon/prayerbook/alerts/) |
+| Security | [![Known Vulnerabilities](https://snyk.io/test/github/joymon/prayerbook/badge.svg?targetFile=package.json)](https://snyk.io/test/github/joymon/prayerbook?targetFile=package.json)[![Total alerts](https://img.shields.io/lgtm/alerts/g/joymon/prayerbook.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/joymon/prayerbook/alerts/) |
 | Issues | [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/joymon/prayerbook.svg)](http://isitmaintained.com/project/joymon/prayerbook.in "Average time to resolve an issue") [![Percentage of issues still open](http://isitmaintained.com/badge/open/joymon/prayerbook.svg)](http://isitmaintained.com/project/joymon/prayerbook "Percentage of issues still open") |
 | Deploy | [![Deploy Status](https://travis-ci.org/joymon/prayerbook.svg)](https://travis-ci.org/joymon/prayerbook) |
 
