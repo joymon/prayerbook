@@ -33,9 +33,9 @@ This is a prayer book intended for personal prayers. Currently it supports Chris
 
 # Running the tests
 ## One time test
-1. Run the command `npm test` to build. 
+1. Run the command `npm test`
 ## Continuous run during development
-1. Run the command `npm run devTest` to build. 
+1. Run the command `npm run devTest`
 
 # Deploying to production
 
