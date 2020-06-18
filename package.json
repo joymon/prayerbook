@@ -24,7 +24,7 @@
     "@types/angular-ui-bootstrap": "^0.13.47",
     "@types/jasmine": "^2.8.11",
     "@types/node": "^10.17.17",
-    "angular": "^1.7.9",
+    "angular": "^1.8.0",
     "angular-mocks": "^1.7.9",
     "angular-sanitize": "^1.7.9",
     "angular-ui-bootstrap": "2.5.6",
