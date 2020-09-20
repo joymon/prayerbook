@@ -34,7 +34,7 @@
     "http-server": "^0.12.3",
     "jasmine": "^2.3.2",
     "jasmine-core": "^2.3.4",
-    "jquery": "^3.5.0",
+    "jquery": "^3.5.1",
     "karma": "^4.4.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.2",
