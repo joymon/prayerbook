@@ -21,6 +21,10 @@ This is a prayer book intended for personal prayers. Currently it supports Chris
 2. Dowload the source code as zip file by clicking on below link.
  1. https://github.com/joymon/PrayerBook/archive/master.zip
 
+# Development
+
+- Added .devcontainer support. Use it to avoid environment setup issues.
+
 # Build
 
 1. Run the command `npm install`
