@@ -25,7 +25,7 @@ This is a prayer book intended for personal prayers. Currently it supports Chris
 
 - Added .devcontainer support. Use it to avoid environment setup issues.
 
-# Build
+# Install dependencies
 
 1. Run the command `npm install`
 
